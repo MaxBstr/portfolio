@@ -1,0 +1,43 @@
+// compress: false
+
+@import "vars";
+
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: @black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* 
+    алгоритм подсчета размеров
+    padding элементов идут вовнутрь
+    размер блоков не меняется
+*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Blocks */
+@import "blocks/container";
+
+/* Header */
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+
+/* Intro */
+@import "blocks/intro";
+@import "blocks/social";
+@import "blocks/btn";
