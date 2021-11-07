@@ -3,7 +3,7 @@
 .btn {
     display: inline-block;
     vertical-align: top;
-    padding: 1.1rem 1.8rem;
+    padding: 1.05em 1.7em;
     min-width: 170px;
    
     font-size: 1.06rem;
@@ -18,7 +18,7 @@
     cursor: pointer;
 
     border: 1px solid @gray;
-    border-radius: 30px;
+    border-radius: 1.8em;
 
     transition: background-color .2s linear, color .2s linear, box-shadow .2s linear;
 
@@ -34,5 +34,14 @@
 
     + .btn {
         margin-left: 1rem;
+    }
+
+    /* Modifiers */
+    &--sm {
+        font-size: 0.94rem;
+        font-weight: 700;
+
+        padding: 0.7em 1.1em;
+        border-width: 2px;
     }
 }

@@ -160,7 +160,7 @@ h6 {
 .btn {
   display: inline-block;
   vertical-align: top;
-  padding: 1.1rem 1.8rem;
+  padding: 1.05em 1.7em;
   min-width: 170px;
   font-size: 1.06rem;
   font-family: inherit;
@@ -172,8 +172,9 @@ h6 {
   line-height: 1.1;
   cursor: pointer;
   border: 1px solid #6A696B;
-  border-radius: 30px;
+  border-radius: 1.8em;
   transition: background-color 0.2s linear, color 0.2s linear, box-shadow 0.2s linear;
+  /* Modifiers */
 }
 .btn:focus {
   outline: none;
@@ -185,4 +186,72 @@ h6 {
 }
 .btn + .btn {
   margin-left: 1rem;
+}
+.btn--sm {
+  font-size: 0.94rem;
+  font-weight: 700;
+  padding: 0.7em 1.1em;
+  border-width: 2px;
+}
+/* Works */
+.works {
+  padding: 2.8rem 0;
+}
+.works__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.works__nav-link {
+  margin: 0 1.2rem;
+  font-size: 0.8rem;
+  color: rgba(43, 42, 44, 0.7);
+  text-decoration: none;
+}
+.works__nav-link:hover {
+  text-decoration: underline;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem 2.8rem;
+}
+.portfolio__col {
+  flex-basis: 33.333333%;
+  padding: 1rem;
+}
+.work {
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(43, 42, 44, 0.25);
+  overflow: hidden;
+  transition: box-shadow 0.2s linear;
+}
+.work:hover {
+  box-shadow: 0 0 25px rgba(43, 42, 44, 0.25);
+}
+.work__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.work__content {
+  padding: 1rem 0.8rem;
+}
+.work__category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #2B2A2C;
+  margin-bottom: 0.5rem;
+}
+.work__title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.06rem;
+  color: #2B2A2C;
+  text-transform: uppercase;
+}
+/* Helpers */
+.text-center {
+  text-align: center;
 }
