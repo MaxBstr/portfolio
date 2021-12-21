@@ -12,6 +12,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 @import "blocks/header";
 @import "blocks/user";
 @import "blocks/nav";
+@import "blocks/burger";
 
 /* Intro */
 @import "blocks/intro";
@@ -57,3 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Helpers */
 @import "blocks/helpers";
+
+/* Modals */
+@import "blocks/modal";
+@import "blocks/modal-work";
+
+/* Contacts */
+@import "blocks/contact";
+@import "blocks/form";

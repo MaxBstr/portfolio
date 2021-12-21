@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacts</title>
+</head>
+<body>
+    <div class="modal modal-contacts">
+        <div class="modal__dialog">
+            <div class="contact">
+
+                <div class="contact__left">
+                    <h3 class="modal__title mb-0">Let's talk!</h3>
+                    <h4 class="modal__subtitle">Send me request</h4>
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+                            <img img class="contact__info-icon" src="img/contacts/phone.png" alt="">
+                            8-915-171-56-76
+                        </li>
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="img/contacts/mail.png" alt="">
+                            maksimbastrikin@yandex.ru
+                        </li>
+                    </ul>
+
+                    <form action="/" method="post">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Your e-mail</label>
+                            <input class="form__input" type="text" id="input-email" name="input-email" placeholder="example@gmail.com">
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Request</label>
+                            <textarea class="form__textarea" type="text" id="input-text" name="input-text" placeholder="Type your request"></textarea>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn" type="submit">send</button>
+                        </div>
+                    </form>
+
+                </div> <!-- ./contact__left -->
+            </div> <!-- ./contact -->
+        </div> <!-- ./modal__dialog -->
+    </div> <!-- ./modal -->
+
+</body>
+</html>

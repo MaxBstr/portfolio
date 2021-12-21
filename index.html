@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="import" href="modals.html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
 </head>
@@ -16,23 +18,26 @@
                 <div class="user">
 
                     <div class="user__avatar">
-                        <img src="https://place-hold.it/57/333" alt="">
+                        <img src="img/icon.png" alt="">
                     </div>
 
                     <div class="user__content">
                         <div class="user__name">Max<br>Bastrykin</div>
-                        <div class="user__prof">Web developer</div>
+                        <div class="user__prof">Python backend developer</div>
                     </div>
 
                 </div>
 
                 <nav class="nav">
-                    <a class="nav__link" href="#">work</a>
-                    <a class="nav__link" href="#">about me</a>
-                    <a class="nav__link" href="#">blog</a>
-                    <a class="nav__link" href="#">contact</a>
-                    <a class="nav__link nav__link--btn" href="#">hire me</a>
+                    <a class="nav__link" href="#projects">projects</a>
+                    <a class="nav__link" href="#about">about</a>
+                    <a class="nav__link nav__link--btn" href="contact.html" target="_blank">contact me</a>
+                    <a class="nav__link" href="promise.html" target="_blank">promises</a>
                 </nav>
+
+                <div class="burger">
+                    <img class="burger__icon" src="img/menu.png" alt="">
+                </div>
 
             </div> <!-- ./header__inner -->
         </div> <!-- ./container -->
@@ -46,7 +51,7 @@
 
                     <h2 class="intro__subtitle">Hello I am</h2>
                     <h1 class="intro__title">Max Bastrykin</h1>
-                    <p class="intro__text">Web developer</p>
+                    <p class="intro__text">Your new: <b><span id="typed" class="intro__text"></b></span></p>
                     
                     <div class="social">
                         <a class="social__link" href="https://vk.com/max_bstr" target="_blank">
@@ -63,147 +68,123 @@
                         </a>
                     </div>
 
-                    <a class="btn" href="">hire me</a>
-                    <button class="btn" type="button">see my resume</button>
+                    <a class="btn" href="contact.html" target="_blank">contact me</a>
+                    <button id="CV" class="btn" type="button" onclick="javascript:window.open('resume.html', '_blank');">see my CV</button>
+                    <p>Кол-во просмотров резюме: <b><span id="counter"></span></b></p>
                 </div> <!-- ./intro__content -->
-                
-                <img class="intro__photo" src="img/passport.png" alt="" width="65%" height="100%">
+                <div class="intro__picture"><img class="intro__photo" src="img/passport.png" alt="" width="70%" height="100%"></div>
                 
             </div> <!-- ./intro__inner -->
         </div> <!-- ./container -->
     </section> <!-- ./intro -->
 
     <!-- Works -->
-    <div class="works">
+    <div class="works" id="projects">
         <div class="container">
+            <div class="works__title">My projects</div>
 
-            <div class="works__nav">
-                <a class= "works__nav-link" href="#">All</a>
-                <a class= "works__nav-link" href="#">Apps</a>
-                <a class= "works__nav-link" href="#">Websites</a>
-                <a class= "works__nav-link" href="#">Others</a>
-            </div>
+            <div class="portfolio swiper-container">
+                <div class="swiper-wrapper">
 
-            <div class="portfolio">
+                    <div class="portfolio__col swiper-slide">
+                        <div class="work">
+                            <img class="work__img" src="img/projects/foodgram.png" alt="">
+                            <div class="work__content">
+                                <div class="work__category">Website</div>
+                                <div class="work__title">
+                                    Foodgram
+                                    <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                    <div class="portfolio__col swiper-slide">
+                        <div class="work">
+                            <img class="work__img" src="img/projects/yamdb.png" alt="">
+                            <div class="work__content">
+                                <div class="work__category">REST API Service</div>
+                                <div class="work__title">
+                                    Yamdb
+                                    <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__col swiper-slide">
+                        <div class="work">
+                            <img class="work__img" src="img/projects/tg_bot.png" alt="">
+                            <div class="work__content">
+                                <div class="work__category">Telegram bot</div>
+                                <div class="work__title">
+                                    Simple Survey Bot
+                                    <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__col swiper-slide">
+                        <div class="work">
+                            <img class="work__img" src="img/projects/yatube.png" alt="">
+                            <div class="work__content">
+                                <div class="work__category">Website</div>
+                                <div class="work__title">
+                                    Yatube
+                                    <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__col swiper-slide">
+                        <div class="work">
+                            <img class="work__img" src="img/projects/yatube_api.png" alt="">
+                            <div class="work__content">
+                                <div class="work__category">REST API Service</div>
+                                <div class="work__title">
+                                    YATUBE API
+                                    <time class="work__date" datetime="2021-01-01 00:00">2021</time>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="portfolio__col">
-                    
-                    <div class="work">
-                        <img class="work__img" src="https://place-hold.it/370x300" alt="">
-                        <div class="work__content">
-                            <div class="work__category">category</div>
-                            <div class="work__title">
-                                Project Title
-                                <time class="work__date" datetime="2021-01-01 00:00">2021</time>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="text-center">
-                <a class="btn btn--sm" href="#">load more works</a>
             </div>
 
         </div> <!-- ./container -->
     </div> <!-- ./works-->
 
     <!-- About me -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
 
             <div class="about__inner">
-
+                <!--
                 <div class="about__photo">
                     <img class="img" src="img/about_photo.png" alt="">
                 </div>
-
+                -->
                 <div class="about__content">
                     <h3 class="about__title">ABOUT ME</h3>
-                    <h2 class="about__bigtitle">WHO AM I</h2>
+                    <h2 class="about__bigtitle">INTRODUCTION</h2>
                     <div class="about__text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rerum ipsa, nostrum provident distinctio inventore officia modi explicabo consequuntur! Consectetur sequi earum ducimus eos sit adipisci, cupiditate deserunt veniam minus!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facere, perferendis quidem molestiae impedit, quas hic totam distinctio laudantium, quis odio unde? Deleniti perferendis inventore minima, blanditiis placeat distinctio adipisci?</p>
+                        <p>
+                            Hi, I'm Max and I'm a python backend developer. I am 20 years old.
+                            I study IT in ITMO University (now I'm on the 3rd grade). 
+                            Before the university I dreamt to be a teacher.
+                        </p>
+                        <p>
+                            At the moment, I learn python language, different libraries and frameworks in particular Django and DRF.
+                        </p>
+                        <p>
+                            I love working with databases and build application architecture.
+                            Also, I'm interested in DevOps: compute cloud, nginx, wsgi services
+                            and Linux!
+                        </p>
                     </div>
-                    <a class="btn" href="">hire me</a>
-                    <button class="btn" type="button">see my resume</button>
                 </div> <!-- ./about__content -->
 
             </div> <!-- ./about__inner -->
@@ -241,16 +222,47 @@
                 </div> <!-- ./footer__credits -->
 
                 <nav class="footer__nav">
-                    <a href="#" class="footer__nav-link">Work</a>
-                    <a href="#" class="footer__nav-link">About me</a>
-                    <a href="#" class="footer__nav-link">Blog</a>
-                    <a href="#" class="footer__nav-link">Contact</a>
-                    <a href="#" class="footer__nav-link footer__nav-link--btn">Hire me</a>
+                    <a href="#projects" class="footer__nav-link">Projects</a>
+                    <a href="#about" class="footer__nav-link">About</a>
+                    <a href="contact.html" class="footer__nav-link footer__nav-link--btn" target="_blank">Contact me</a>
                 </nav>
 
             </div> <!-- ./footer__inner -->
         </div> <!-- ./container -->
     </footer>
+
+    <!-- modals -->
+    <div class="modal" id="modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button">
+                <img src="img/modal-close.png" alt="Close">
+            </button>
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <img class="modal-work__photo" src="https://place-hold.it/790/780" alt="">
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Project title</h3>
+                        <div class="modal-work__info">category <span class="modal-work__info-divider">|</span> year</div>
+                    </div>
+
+                    <div class="modal-work__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, autem ratione quos fugit aliquid quidem dolor eum, beatae cumque obcaecati, nobis porro dolorem exercitationem! Dolores dolore ducimus sit officiis inventore?</div>
+                </div>
+
+            </div>
+
+        </div> <!-- ./modal__dialog -->
+    </div> <!-- ./modal -->
+
+    <!-- JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
